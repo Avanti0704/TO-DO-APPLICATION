@@ -1,0 +1,268 @@
+.card-container {
+  .card-container {
+    &.light {
+      background-color: #f5f5f5;
+      color: #000000; /* Default text color in light mode */
+    }
+  
+    &.dark {
+      background-color: #333333;
+      color: #ffffff; /* Text color changes to white in dark mode */
+    }
+  }
+  
+  /* Ensure text inside elements like Typography also changes */
+  .text-dark {
+    color: #ffffff !important;
+  }
+  
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    margin-top: 16px;
+    padding: 16px;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
+    // background-color: rgb(232, 68, 68);
+    border: 1px solid white;
+    &:hover {
+      transform: scale(1.03);
+      box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+//   .card-container.completed {
+//     border: 1px solid #e0ffe0;
+//   }
+  
+//   .card-container.pending {
+//     border: 2px solid #e4990e;
+
+//   }
+  
+  .menu-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  
+    &:hover {
+      color: gray;
+    }
+  }
+  .menu-button .MuiSvgIcon-root {
+    transition: color 0.3s ease;
+  
+    &:hover {
+      &.complete-icon {
+        color: rgb(52, 255, 52);
+      }
+  
+      &.edit-icon {
+        color: blue;
+      }
+  
+      &.delete-icon {
+        color: red;
+      }
+    }
+  }
+ 
+    .no-tasks-image {
+      max-width: 45%;
+      height: 50%;
+      margin: 70px auto; 
+    }
+  
+
+ 
+.subtask-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subtask-modal .modal-container {
+  background-color: #fff; /* Light mode background */
+  padding: 20px;
+  width: 400px;
+  max-width: 90%;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.subtask-modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.subtask-modal .modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #000; /* Light text color */
+}
+
+.subtask-modal .modal-header .close-button {
+  color: #757575;
+}
+
+.subtask-modal .modal-header .close-button:hover {
+  color: #000;
+}
+
+.subtask-modal .modal-content {
+  flex-grow: 1;
+}
+
+.subtask-modal .modal-content .input-field {
+  margin-bottom: 16px;
+}
+
+.subtask-modal .modal-content .MuiInputBase-root {
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+.subtask-modal .modal-content .subtask-list {
+  list-style: circle;
+  padding: 0;
+}
+
+.subtask-modal .modal-content .subtask-list .subtask-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.subtask-modal .modal-content .subtask-list .subtask-item .subtask-text {
+  flex-grow: 1;
+}
+
+.subtask-modal .modal-content .subtask-list .subtask-item .edit-button,
+.subtask-modal .modal-content .subtask-list .subtask-item .delete-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.subtask-modal .modal-content .subtask-list .subtask-item .edit-button svg,
+.subtask-modal .modal-content .subtask-list .subtask-item .delete-button svg {
+  font-size: 20px;
+  color: #757575;
+}
+
+.subtask-modal .modal-content .subtask-list .subtask-item .edit-button svg:hover,
+.subtask-modal .modal-content .subtask-list .subtask-item .delete-button svg:hover {
+  color: #00000000;
+}
+
+.subtask-modal .modal-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.subtask-modal .modal-actions .Button {
+  background-color: #1976d2;
+  color: #fff;
+}
+
+.subtask-modal .modal-actions .Button:hover {
+  background-color: #1565c0;
+}
+
+/* Dark Mode Styles */
+.subtask-modal.dark-mode {
+  background-color:#00000000;
+}
+
+.subtask-modal.dark-mode .modal-container {
+  background-color: #333; 
+}
+.subtask-modal.dark-mode .modal-header h2 {
+  color: #fff; 
+}
+
+.subtask-modal.dark-mode .modal-header .close-button {
+  color: #ccc;
+}
+
+.subtask-modal.dark-mode .modal-header .close-button:hover {
+  color: #fff;
+}
+
+.subtask-modal.dark-mode .modal-content {
+  color: #fff; 
+}
+
+.subtask-modal.dark-mode .modal-content .MuiInputBase-root {
+  background: #444;
+}
+
+.subtask-modal.dark-mode .modal-content .subtask-list .subtask-item {
+  border-bottom: 1px solid #555; 
+}
+
+.subtask-modal.dark-mode .modal-content .subtask-list .subtask-item .edit-button svg,
+.subtask-modal.dark-mode .modal-content .subtask-list .subtask-item .delete-button svg {
+  color: #ccc; 
+}
+
+.subtask-modal.dark-mode .modal-content .subtask-list .subtask-item .edit-button svg:hover,
+.subtask-modal.dark-mode .modal-content .subtask-list .subtask-item .delete-button svg:hover {
+  color: #fff;
+}
+
+.subtask-modal.dark-mode .modal-actions .Button {
+  background-color: #555; 
+  color: #fff;
+}
+
+.subtask-modal.dark-mode .modal-actions .Button:hover {
+  background-color: #777;
+}
+
+.add-subtask-button {
+  background-color: #9c27b0;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.change-status-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #9c27b0;
+      color: #ffffff;
+      border: none;
+      padding: 5px 15px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    
+      &:hover {
+        background: linear-gradient(45deg, #c661e5, #6e0f97);
+        color: #ffffff;
+      }
+    
+      .dropdown-icon {
+        margin-left: 8px;
+      }
+    }
+    .overdue {
+      color: red;
+      font-weight: bold;
+    }

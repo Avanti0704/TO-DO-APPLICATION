@@ -1,0 +1,47 @@
+.nav-main {
+  .MuiTab-root {
+    font-weight: normal;
+    transition: all 0.3s ease;
+    color: white;
+  }
+
+  .Mui-selected {
+    font-weight: bold;
+    color: #9c27b0;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: "8px 12px",
+
+  }
+}
+
+.tab-margin {
+  margin-left: 3%;
+
+}
+
+.menu-light {
+  background-color: #ffffff00;
+  color: #000000;
+
+  .MuiMenuItem-root {
+    color: #000000;
+  }
+
+  .MuiDivider-root {
+    background-color: #cccccc;
+  }
+}
+
+.menu-dark {
+  background-color: #00000000;
+  color: #ffffff;
+
+  .MuiMenuItem-root {
+    color: #000;
+  }
+
+  .MuiDivider-root {
+    background-color: #555555;
+  }
+}

@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import TaskManager from "./Layouts/TaskManager";
+import PageNotFound from "./Components/PageNotFound";
+import { ThemeProvider } from "./Contexts/Theme";
+import SignIn from "./Authentication/SignIn";
+import SignUp from "./Authentication/SignUp";
 import './App.css';
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+
+      <Router>
+        <Routes>
+          <Route path="/" element={<SignIn />} />
+          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/all-tasks" element={<TaskManager />} />
+          <Route path="/pending-tasks" element={<TaskManager />} />
+          <Route path="/completed-tasks" element={<TaskManager />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
+
   );
-}
+};
 
 export default App;
