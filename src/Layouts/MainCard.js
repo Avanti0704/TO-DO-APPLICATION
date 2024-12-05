@@ -79,7 +79,7 @@ const MainCard = ({ task, onEdit, onDelete, onStatusChange }) => {
     onDelete(task);
     setConfirmOpen(false);
   };
-
+ 
   useEffect(() => {
     const storedSubtasks = JSON.parse(localStorage.getItem(`subtasks-${task.id}`)) || [];
     setSubtasks(storedSubtasks);
@@ -143,10 +143,10 @@ const MainCard = ({ task, onEdit, onDelete, onStatusChange }) => {
     const year = String(date.getFullYear()).slice(2);
     return `${day}/${month}/${year}`;
   };
-
-
+ 
   return (
     <>
+      
       <Card
         className={`card-container ${task.status === "Completed" ? "completed" : "pending"} ${theme} `}
       >

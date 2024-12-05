@@ -128,7 +128,7 @@ function SignUp() {
                     <Grid item xs={6}>
                         <Box className="background-container">
                             <Typography
-                                variant="h3"
+                                variant="h5"
                                 className="sign-in-text"
                                 sx={{ marginTop: 15, marginLeft: 10 }}
                             >
@@ -136,7 +136,7 @@ function SignUp() {
                                     src={sign}
                                     style={{
                                         marginBottom: '10px',
-                                        width: "40%",
+                                        width: "30%",
                                     }}
                                 />
                                 Welcome to Your Ultimate Task Manager !

@@ -87,7 +87,7 @@ function SignIn() {
                 pauseOnFocusLoss
                 draggable
                 pauseOnHover
-                toastStyle={{ background: "success", color: "green", minHeight: "50px" }}
+                toastStyle={{ background: "green", color: "white", minHeight: "50px" }}
                 theme="#F5F5FC"
             />
 
@@ -96,7 +96,7 @@ function SignIn() {
                     <Grid item xs={6}>
                         <Box className="background-container">
                             <Typography
-                                variant="h3"
+                                variant="h5"
                                 className="sign-in-text"
                                 sx={{ marginTop: 15, marginLeft: 10 }}
                             >
@@ -104,7 +104,7 @@ function SignIn() {
                                     src={sign}
                                     style={{
                                         marginBottom: '10px',
-                                        width: "40%",
+                                        width: "30%",
                                     }}
                                 />
                                 Welcome to Your Ultimate Task Manager !
@@ -113,9 +113,6 @@ function SignIn() {
 
                         </Box>
                     </Grid>
-
-
-
                     <Grid item xs={6}>
                         <Box
                             sx={{

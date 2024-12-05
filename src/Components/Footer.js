@@ -13,7 +13,7 @@ const Footer = () => {
             }}
         >
             <Typography variant="body2" color="text.secondary">
-                The TASKFLOW 2024@All rights reserved.
+                Made with React & MUI @All rights reserved. TASKFLOW 2024
             </Typography>
         </Box>
     );
